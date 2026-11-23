@@ -1,5 +1,19 @@
 /* Mageywallet site. Colours and type follow the app's Vilu theme (sea, sky, sand). */
 
+/* Open Thaana (https://github.com/siyamex/Open-Thaana-Font), SIL OFL 1.1, licence in fonts/.
+   The same font the app uses. Thaana letters only: Latin letters and digits fall through to
+   Manrope or Bricolage Grotesque. One weight; bold is synthesised by the browser. */
+@font-face {
+  font-family: "Open Thaana";
+  src: url("fonts/OpenThaana-Regular.woff2") format("woff2"),
+       url("fonts/OpenThaana-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0020, U+00A0, U+0780-07BF;
+  size-adjust: 115%; /* its letters are small next to Manrope at the same size */
+}
+
 :root {
   --sky-bg: #edf6fa;
   --surface: #ffffff;
@@ -21,7 +35,7 @@
 
   --font-display: "Bricolage Grotesque", system-ui, sans-serif;
   --font-body: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --font-thaana: "Noto Sans Thaana", "MV Faseyha", "Faruma", sans-serif;
+  --font-thaana: "Open Thaana";
 
   color-scheme: light;
 }
