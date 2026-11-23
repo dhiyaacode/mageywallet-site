@@ -9,6 +9,7 @@ Live at <https://dhiyaacode.github.io/mageywallet-site/>.
 | Home | `index.html` | `dv/index.html` |
 | Privacy policy | `privacy.html` | `dv/privacy.html` |
 | Support | `support.html` | `dv/support.html` |
+| Guides | `guides.html` | `dv/guides.html` |
 
 Plain HTML and CSS, served by GitHub Pages from the `main` branch. No build step. `assets/lightbox.js` opens a screenshot full screen when tapped (tap to zoom, swipe for the next, back button closes); without JavaScript each screenshot is a link to its full-size image. The app's source code is not in this repository.
 
