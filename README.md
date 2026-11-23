@@ -10,12 +10,12 @@ Live at <https://shahjaufar.github.io/mageywallet-site/>.
 | Privacy policy | `privacy.html` | `dv/privacy.html` |
 | Support | `support.html` | `dv/support.html` |
 
-Plain HTML and CSS, served by GitHub Pages from the `main` branch. No build step. The app's source code is not in this repository.
+Plain HTML and CSS, served by GitHub Pages from the `main` branch. No build step. `assets/lightbox.js` opens a screenshot full screen when tapped (tap to zoom, swipe for the next, back button closes); without JavaScript each screenshot is a link to its full-size image. The app's source code is not in this repository.
 
 ## Editing
 
 - The English privacy policy is the authoritative version. If it changes, update the Dhivehi copy and the effective date in both.
-- Screenshots in `assets/screens/` use made-up names and amounts. Never add a real bank slip, name, account number or reference.
+- Screenshots: `assets/screens/` holds 720 × 1280 copies for the page and `assets/screens/full/` the 1440 × 2560 ones the viewer loads. Both use made-up names and amounts. Never add a real bank slip, name, account number or reference.
 - When the app is live on Google Play, replace the "Coming soon on Google Play" text in both home pages with a link to `https://play.google.com/store/apps/details?id=com.salhi.mageywallet`.
 
 ## Fonts
