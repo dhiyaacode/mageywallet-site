@@ -145,30 +145,37 @@
     e.preventDefault();
   });
 
-  // Swipe sideways for the next or previous screen when not zoomed in.
-  let sx = 0, sy = 0, tracking = false;
+  // Swipe sideways for the next or previous screen when not zoomed in. The stage's
+  // touch-action (CSS) keeps sideways drags for this script instead of the browser. Some
+  // browsers end the gesture with touchcancel, so the last position seen is used.
+  let sx = 0, sy = 0, lx = 0, ly = 0, tracking = false;
   stage.addEventListener("touchstart", (e) => {
     swiped = false;
     tracking = !zoomed && e.touches.length === 1;
     if (tracking) {
-      sx = e.touches[0].clientX;
-      sy = e.touches[0].clientY;
+      sx = lx = e.touches[0].clientX;
+      sy = ly = e.touches[0].clientY;
     }
   }, { passive: true });
   stage.addEventListener("touchmove", (e) => {
-    if (e.touches.length > 1) tracking = false; // pinch
+    if (e.touches.length > 1) { tracking = false; return; } // pinch
+    lx = e.touches[0].clientX;
+    ly = e.touches[0].clientY;
   }, { passive: true });
-  stage.addEventListener("touchend", (e) => {
+  const endSwipe = (e) => {
     if (!tracking) return;
     tracking = false;
-    const dx = e.changedTouches[0].clientX - sx;
-    const dy = e.changedTouches[0].clientY - sy;
+    const p = e.changedTouches && e.changedTouches[0];
+    const dx = (p ? p.clientX : lx) - sx;
+    const dy = (p ? p.clientY : ly) - sy;
     if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) {
       swiped = true;
       show(index + (dx < 0 ? 1 : -1));
       setTimeout(() => { swiped = false; }, 350);
     }
-  });
+  };
+  stage.addEventListener("touchend", endSwipe);
+  stage.addEventListener("touchcancel", endSwipe);
 
   dlg.addEventListener("close", () => {
     document.documentElement.classList.remove("lb-open");

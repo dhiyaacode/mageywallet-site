@@ -240,6 +240,7 @@ dialog.lb::backdrop { background: rgba(3, 14, 21, .96); }
   flex: 1; min-height: 0; position: relative;
   display: flex; overflow: auto; padding: 4px 12px;
   overscroll-behavior: contain; -webkit-overflow-scrolling: touch;
+  touch-action: pan-y pinch-zoom; /* sideways drags go to the swipe code */
 }
 /* margin:auto centres the picture yet still lets a zoomed one scroll to every edge */
 .lb-img {
@@ -247,7 +248,7 @@ dialog.lb::backdrop { background: rgba(3, 14, 21, .96); }
   object-fit: contain; border-radius: 14px; cursor: zoom-in;
   user-select: none; -webkit-user-select: none; -webkit-touch-callout: none;
 }
-.lb-stage.zoomed { padding: 0; }
+.lb-stage.zoomed { padding: 0; touch-action: auto; }
 .lb-stage.zoomed .lb-img { max-width: none; max-height: none; border-radius: 0; cursor: zoom-out; }
 
 .lb-cap { flex: 1; min-width: 0; margin: 0; text-align: center; font-size: 15px; line-height: 1.45; }
