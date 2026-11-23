@@ -33,7 +33,7 @@
 <main id="main" class="page">
 <div class="wrap narrow">
 <h1>Mageywallet privacy policy</h1>
-<p class="meta">Effective 23 November 2026 · Applies to the Mageywallet app for Android (com.salhi.mageywallet)</p>
+<p class="meta">Effective 24 November 2026 · Applies to the Mageywallet app for Android (com.salhi.mageywallet)</p>
 
 <div class="summary">
 <p><strong>In short</strong></p>
@@ -60,8 +60,12 @@
 </ul>
 
 <h2>Photos</h2>
-<p>If you allow it, Mageywallet reads images in the photo albums where bank slips are usually saved (for example WhatsApp, Screenshots and Downloads, or the albums you choose) to find bank transfer and bill payment slips. You can also pick photos yourself, or share a slip into the app from another app.</p>
+<p>The version of Mageywallet on Google Play does not ask for access to your photos. It reads only the photos you pick in Android's photo picker, or a slip you share into it from another app.</p>
+<p>The version installed directly from the developer can also, if you allow it, read images in the photo albums where bank slips are usually saved (for example WhatsApp, Screenshots and Downloads, or the albums you choose), each time you open the app while "Keep finding new slips" is on.</p>
 <p>The text on each image is read on your phone by Google's ML Kit text recognition, which is built into the app. Images are never uploaded, copied or changed. Images that are not slips are skipped; the app keeps only a link to each one and a note that it was checked, so it is not read again.</p>
+
+<h2>Bank statement files</h2>
+<p>If you use Check with a statement, you choose a statement file (CSV, Excel or a web page saved from your bank) with Android's file picker. Mageywallet reads it on your phone to compare it with your entries. The file is not copied, kept or uploaded. Only the lines you choose to add are saved, as entries marked "From statement", with the bank's reference and what the bank called the line. If the statement's account number is not saved yet, it is saved to the account you picked so the next statement is found by itself.</p>
 
 <h2>No internet access</h2>
 <p>Mageywallet does not have Android's internet permission, so Android does not let it connect to the internet at all. The ML Kit library normally sends Google usage figures about how it performs. In Mageywallet that is switched off and cannot happen, because the app has no network connection.</p>
@@ -77,7 +81,7 @@
 <h2>Permissions the app asks for</h2>
 <div class="table-scroll"><table>
   <tr><th>Permission</th><th>Why</th></tr>
-  <tr><td>Photos and images</td><td>To find and read bank slips saved on your phone.</td></tr>
+  <tr><td>Photos and images (only in the version installed directly from the developer)</td><td>To find and read bank slips saved on your phone. The Google Play version does not ask for it.</td></tr>
   <tr><td>Notifications</td><td>To remind you about pay-back dates.</td></tr>
   <tr><td>Run at start-up</td><td>To set pay-back reminders again after the phone restarts.</td></tr>
   <tr><td>View network connections</td><td>Asked for by the ML Kit library. It only lets the app see whether the phone is online; it cannot connect to anything.</td></tr>
