@@ -15,7 +15,7 @@ Plain HTML and CSS, served by GitHub Pages from the `main` branch. No build step
 ## Editing
 
 - The English privacy policy is the authoritative version. If it changes, update the Dhivehi copy and the effective date in both.
-- Screenshots: `assets/screens/` holds 720 × 1280 copies for the page and `assets/screens/full/` the 1440 × 2560 ones the viewer loads. Both use made-up names and amounts. Never add a real bank slip, name, account number or reference.
+- Screenshots: `assets/screens/` holds 720 × 1280 copies for the page and `assets/screens/full/` the 1440 × 2560 ones the viewer loads; the Dhivehi home page uses the Dhivehi app's screens with Dhivehi captions from `assets/screens/dv/` and `assets/screens/dv/full/`. All use made-up names and amounts. Never add a real bank slip, name, account number or reference.
 - When the app is live on Google Play, replace the "Coming soon on Google Play" text in both home pages with a link to `https://play.google.com/store/apps/details?id=com.salhi.mageywallet`.
 
 ## Fonts
