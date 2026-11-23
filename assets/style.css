@@ -1,0 +1,191 @@
+/* Mageywallet site. Colours and type follow the app's Vilu theme (sea, sky, sand). */
+
+:root {
+  --sky-bg: #edf6fa;
+  --surface: #ffffff;
+  --sand-surface: #f7f0e3;
+  --hairline: #d3e3eb;
+  --ink: #0a2536;
+  --ink-muted: #45647a;
+  --ocean: #0b5d8f;
+  --on-ocean: #ffffff;
+  --lagoon: #1fbdb6;
+  --sand: #f0dfbe;
+  --income: #08717c;
+  --expense: #c13d2a;
+  --hero-top: #0b5d8f;
+  --hero-bottom: #082d45;
+  --on-hero: #ffffff;
+  --on-hero-muted: #bfe5f7;
+  --shadow: 0 1px 2px rgba(10, 37, 54, .06), 0 8px 24px rgba(10, 37, 54, .08);
+
+  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-body: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-thaana: "Noto Sans Thaana", "MV Faseyha", "Faruma", sans-serif;
+
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --sky-bg: #06141d;
+    --surface: #0c2130;
+    --sand-surface: #13293a;
+    --hairline: #21445a;
+    --ink: #e4f2f8;
+    --ink-muted: #9dbccb;
+    --ocean: #6cc4f0;
+    --on-ocean: #04202f;
+    --lagoon: #3fd8cf;
+    --sand: #4a3d27;
+    --income: #55d6dc;
+    --expense: #ff9280;
+    --hero-top: #123e5a;
+    --hero-bottom: #06141d;
+    --on-hero: #e4f2f8;
+    --on-hero-muted: #9dbccb;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px rgba(0, 0, 0, .35);
+    color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--sky-bg);
+  color: var(--ink);
+  font: 17px/1.6 var(--font-body);
+}
+
+html[lang="dv"] body { font-family: var(--font-thaana), var(--font-body); line-height: 1.9; }
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: var(--ocean); text-underline-offset: 3px; }
+
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.2; letter-spacing: -0.01em; margin: 0 0 12px; }
+html[lang="dv"] h1, html[lang="dv"] h2, html[lang="dv"] h3 { font-family: var(--font-thaana), var(--font-display); letter-spacing: 0; line-height: 1.6; }
+
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+.narrow { max-width: 720px; }
+
+.skip { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.skip:focus { width: auto; height: auto; clip-path: none; inset-inline-start: 16px; top: 16px; background: var(--surface); color: var(--ink); padding: 8px 12px; border-radius: 8px; z-index: 10; }
+
+/* Header */
+
+.site-header { padding: 16px 0; }
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.brand { display: flex; align-items: center; gap: 10px; color: inherit; text-decoration: none; font-family: var(--font-display); font-weight: 700; font-size: 20px; }
+html[lang="dv"] .brand { font-family: var(--font-thaana), var(--font-display); }
+.brand img { width: 36px; height: 36px; border-radius: 9px; }
+.site-nav { display: flex; gap: 6px 18px; flex-wrap: wrap; font-weight: 600; font-size: 15px; }
+.site-nav a { color: inherit; text-decoration: none; }
+.site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--ocean); text-decoration: underline; }
+.lang { font-family: var(--font-thaana), var(--font-body); }
+
+.on-hero .site-header, .on-hero .site-header .brand, .on-hero .site-nav a { color: var(--on-hero); }
+.on-hero .site-nav a:hover, .on-hero .site-nav a[aria-current="page"] { color: var(--on-hero); }
+
+/* Hero */
+
+.hero {
+  background: linear-gradient(180deg, var(--hero-top), var(--hero-bottom));
+  color: var(--on-hero);
+  padding-bottom: 0;
+  overflow: hidden;
+}
+.hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 32px; align-items: end; padding-top: 32px; }
+.hero h1 { font-size: clamp(34px, 6vw, 56px); margin-bottom: 16px; }
+.hero .lede { font-size: clamp(18px, 2.4vw, 21px); color: var(--on-hero-muted); max-width: 34em; margin: 0 0 24px; }
+.hero-copy { padding-bottom: 56px; }
+.hero-shot { justify-self: center; width: min(320px, 100%); }
+.hero-shot img { border-radius: 28px 28px 0 0; box-shadow: 0 -4px 40px rgba(0, 0, 0, .25); }
+
+.badges { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 24px; padding: 0; list-style: none; }
+.badges li { border: 1px solid rgba(255, 255, 255, .35); border-radius: 999px; padding: 4px 12px; font-size: 14px; font-weight: 600; }
+
+.cta { display: inline-flex; align-items: center; gap: 10px; background: var(--surface); color: var(--ink); border-radius: 999px; padding: 12px 22px; font-weight: 700; text-decoration: none; }
+.cta.soon { cursor: default; }
+.cta small { font-weight: 600; color: var(--ink-muted); }
+
+/* Wave-crest motif from the Vilu theme */
+
+.crest {
+  height: 28px;
+  background: radial-gradient(circle at 14px 28px, var(--sky-bg) 13px, transparent 14px) repeat-x;
+  background-size: 28px 28px;
+  margin-top: -27px;
+  position: relative;
+}
+
+/* Sections */
+
+section { padding: 56px 0; }
+.section-title { font-size: clamp(26px, 4vw, 36px); }
+.section-lede { color: var(--ink-muted); max-width: 40em; margin: 0 0 32px; }
+
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.card { background: var(--surface); border: 1px solid var(--hairline); border-radius: 20px; padding: 20px 22px; box-shadow: var(--shadow); }
+.card h3 { font-size: 20px; margin-bottom: 8px; }
+.card ul { margin: 0; padding-inline-start: 20px; }
+.card li { margin: 0 0 6px; }
+.card .dot { display: inline-block; width: 12px; height: 12px; border-radius: 50%; margin-inline-end: 8px; vertical-align: baseline; }
+
+.screens { display: grid; grid-auto-flow: column; grid-auto-columns: min(240px, 70%); gap: 16px; overflow-x: auto; padding: 4px 4px 16px; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; }
+.screens figure { margin: 0; scroll-snap-align: start; }
+.screens img { border-radius: 18px; box-shadow: var(--shadow); }
+
+.private { background: var(--sand-surface); }
+.private-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; }
+.private-grid h3 { font-size: 18px; margin-bottom: 4px; }
+.private-grid p { margin: 0; color: var(--ink-muted); }
+
+.note { color: var(--ink-muted); font-size: 15px; }
+
+/* Text pages (privacy, support) */
+
+.page { padding: 32px 0 64px; }
+.page h1 { font-size: clamp(30px, 5vw, 40px); margin-bottom: 4px; }
+.page h2 { font-size: 21px; margin: 36px 0 8px; }
+.page p, .page li { margin: 0 0 10px; }
+.page ul { padding-inline-start: 22px; }
+.meta { color: var(--ink-muted); margin-bottom: 24px; }
+.summary { background: var(--surface); border: 1px solid var(--hairline); border-radius: 16px; padding: 16px 20px; }
+.summary ul { margin: 0; }
+.table-scroll { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; margin: 8px 0 12px; }
+th, td { text-align: start; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--hairline); }
+th { color: var(--ink-muted); font-weight: 600; }
+
+details { background: var(--surface); border: 1px solid var(--hairline); border-radius: 14px; padding: 4px 18px; margin: 0 0 10px; }
+details[open] { padding-bottom: 12px; }
+summary { cursor: pointer; font-weight: 700; padding: 10px 0; }
+details p:last-child { margin-bottom: 0; }
+
+.contact-box { background: var(--surface); border: 1px solid var(--hairline); border-radius: 16px; padding: 18px 22px; margin: 16px 0 24px; }
+.contact-box a { font-weight: 700; font-size: 18px; word-break: break-all; }
+
+/* Footer */
+
+.site-footer { border-top: 1px solid var(--hairline); padding: 24px 0 40px; color: var(--ink-muted); font-size: 14px; }
+.site-footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+.site-footer nav { display: flex; flex-wrap: wrap; gap: 6px 18px; }
+.site-footer a { color: inherit; }
+
+/* Latin text inside Dhivehi pages: amounts, bank names, email */
+.ltr { direction: ltr; unicode-bidi: isolate; font-family: var(--font-body); }
+
+@media (max-width: 760px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 8px; padding-top: 16px; }
+  .hero-copy { padding-bottom: 24px; }
+  .hero-shot { width: min(260px, 80%); }
+  section { padding: 40px 0; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
