@@ -2,7 +2,7 @@
 
 The public website for Mageywallet, a spending tracker for the Maldives that reads BML and MIB transfer slips and keeps everything on the phone.
 
-Live at <https://shahjaufar.github.io/mageywallet-site/>.
+Live at <https://dhiyaacode.github.io/mageywallet-site/>.
 
 | Page | English | Dhivehi |
 |---|---|---|
