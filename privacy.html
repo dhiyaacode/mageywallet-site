@@ -53,7 +53,7 @@
 <ul>
   <li><strong>Your entries:</strong> amounts, dates, categories, notes and which account they belong to.</li>
   <li><strong>Your accounts:</strong> names you give them, the bank, and the account number if you add it.</li>
-  <li><strong>Bank slips the app has read:</strong> the details printed on the slip (bank, amount, date, reference, the sender's and receiver's names and account numbers, remarks), and a link to the image on your phone. The image itself is not copied.</li>
+  <li><strong>Bank slips the app has read:</strong> the details printed on the slip (bank, amount, date, reference, the sender's and receiver's names and account numbers, remarks), and a link to the image on your phone. For a slip you chose or shared yourself, a copy of the image is kept inside the app (see Photos).</li>
   <li><strong>Shops and people:</strong> names and account numbers seen on your slips, with the category you chose for them, so their next slips are sorted for you.</li>
   <li><strong>Money you lent or borrowed:</strong> the person's name, the amounts, the pay-back date and, if you add it, their phone number.</li>
   <li><strong>Your profile and settings:</strong> the name shown in the greeting and your choices in Settings.</li>
@@ -62,7 +62,8 @@
 <h2>Photos</h2>
 <p>The version of Mageywallet on Google Play does not ask for access to your photos. It reads only the photos you pick in Android's photo picker, or a slip you share into it from another app.</p>
 <p>The version installed directly from the developer can also, if you allow it, read images in the photo albums where bank slips are usually saved (for example WhatsApp, Screenshots and Downloads, or the albums you choose), each time you open the app while "Keep finding new slips" is on.</p>
-<p>The text on each image is read on your phone by Google's ML Kit text recognition, which is built into the app. Images are never uploaded, copied or changed. Images that are not slips are skipped; the app keeps only a link to each one and a note that it was checked, so it is not read again.</p>
+<p>The text on each image is read on your phone by Google's ML Kit text recognition, which is built into the app. Images are never uploaded or changed. Images that are not slips are skipped; the app keeps only a link to each one and a note that it was checked, so it is not read again.</p>
+<p>When you choose a photo in the photo picker, or share one into Mageywallet, Android lets the app open that photo only for a short time. So that the slip's picture can still be shown to you later, Mageywallet keeps a copy of it inside the app's own storage if it is a bank slip. A copy of a photo that turns out not to be a slip is deleted, at the latest the next time you open the app after an hour. The copies stay on your phone, no other app can open them, and they are deleted when you uninstall Mageywallet or clear its data. Slips found in your albums by the directly installed version are not copied.</p>
 
 <h2>Bank statement files</h2>
 <p>If you use Check with a statement, you choose a statement file (CSV, Excel or a web page saved from your bank) with Android's file picker. Mageywallet reads it on your phone to compare it with your entries. The file is not copied, kept or uploaded. Only the lines you choose to add are saved, as entries marked "From statement", with the bank's reference and what the bank called the line. If the statement's account number is not saved yet, it is saved to the account you picked so the next statement is found by itself.</p>
